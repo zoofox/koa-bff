@@ -1,20 +1,20 @@
-const moduleAlias = require('module-alias')
+import moduleAlias  from 'module-alias' 
 moduleAlias.addAliases({
-  '@root'  : __dirname,
+  '@root': __dirname,
   '@controllers': __dirname + '/controllers',
   '@models': __dirname + '/models',
 })
-const Koa = require('koa');
-const {port,viewDir,staticDir} = require('./config');
-console.log('环境',process.env.NODE_ENV);
-const {join} = require('path');
-const co = require('co');//
+import Koa  from 'koa';
+import { port, viewDir, staticDir }  from './config';
+console.log('环境', process.env.NODE_ENV);
+import { join }  from 'path';
+import co  from 'co';//
 const app = new Koa();
-const serve = require('koa-static');
-const render = require('koa-swig');
-const { historyApiFallback } = require('koa2-connect-history-api-fallback');
-const log4js = require("log4js");
-const errorHandler = require('./middleware/errorHandler');
+import serve  from 'koa-static';
+import render  from 'koa-swig';
+import { historyApiFallback } = from 'koa2-connect-history-api-fallback';
+import log4js  from "log4js";
+import errorHandler  from './middleware/errorHandler';
 
 log4js.configure({
   appenders: { cheese: { type: "file", filename: "./logs/bff.log" } },
@@ -31,23 +31,21 @@ const logger = log4js.getLogger("bff-test");
 // logger.error("Cheese is too ripe!");
 // logger.fatal("Cheese was breeding ground for listeria.");
 
-
-
 app.use(serve(staticDir))
 // app.use(historyApiFallback({ index:'/',whiteList: ['/api'] }));
 
 app.context.render = co.wrap(render({
-	root:viewDir,
-	autoscape:true,
-	cache:process.env.NODE_ENV == "development" ? false : 'memory',
-	ext:'html',
-	varControls:["[[","]]"],
-	writeBody: false
+  root: viewDir,
+  autoscape: true,
+  cache: process.env.NODE_ENV == "development" ? false : 'memory',
+  ext: 'html',
+  varControls: ["[[", "]]"],
+  writeBody: false
 }))
-errorHandler.error(app,logger);
+errorHandler.error(app, logger);
 //路由注册中心
-require('./controllers')(app);
+from('./controllers')(app);
 
-app.listen(port, ()=>{
-	console.log('服务启动成功');
+app.listen(port, () => {
+  console.log('服务启动成功');
 })
