@@ -1,0 +1,17 @@
+[2020-07-02T17:10:25.121] [ERROR] cheese - Cheese is too ripe!
+[2020-07-02T17:10:25.123] [FATAL] cheese - Cheese was breeding ground for listeria.
+[2020-07-02T17:11:47.872] [ERROR] bff-test - Cheese is too ripe!
+[2020-07-02T17:11:47.876] [FATAL] bff-test - Cheese was breeding ground for listeria.
+[2020-07-02T19:45:56.259] [ERROR] bff-test - Cheese is too ripe!
+[2020-07-02T19:45:56.265] [FATAL] bff-test - Cheese was breeding ground for listeria.
+[2020-07-02T19:58:18.657] [ERROR] bff-test - ReferenceError: data is not defined
+    at actionIndex (/Users/xielei/Documents/src/yideng/bff/controllers/IndexController.js:7:13)
+    at dispatch (/Users/xielei/Documents/src/yideng/bff/node_modules/koa-simple-router/index.js:186:18)
+    at Router._lookup (/Users/xielei/Documents/src/yideng/bff/node_modules/koa-simple-router/index.js:198:12)
+    at /Users/xielei/Documents/src/yideng/bff/node_modules/koa-simple-router/index.js:138:21
+    at dispatch (/Users/xielei/Documents/src/yideng/bff/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/xielei/Documents/src/yideng/bff/middleware/errorHandler.js:14:10
+    at dispatch (/Users/xielei/Documents/src/yideng/bff/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/xielei/Documents/src/yideng/bff/middleware/errorHandler.js:5:11
+    at dispatch (/Users/xielei/Documents/src/yideng/bff/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/xielei/Documents/src/yideng/bff/node_modules/koa-static/index.js:53:15)
