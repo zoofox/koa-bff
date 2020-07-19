@@ -9,7 +9,9 @@ const { sync } = require('glob'); //匹配文件
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlAfterPlugin = require('./config/htmlAfterPlugin');
+const setTitle = require('node-bash-title');
 
+setTitle('🍺client构建')
 
 //找views内entry.js文件
 const files = sync('./src/web/views/**/*.entry.js');
@@ -64,6 +66,9 @@ const webpackConfig = {
     runtimeChunk: {
       name: 'runtime'
     }
+  },
+  externals:{
+    jquery:'jQuery'
   },
   plugins: [..._plugins, new HtmlAfterPlugin()],
   resolve: {

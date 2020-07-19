@@ -4,7 +4,7 @@ var _moduleAlias = _interopRequireDefault(require("module-alias"));
 
 var _koa = _interopRequireDefault(require("koa"));
 
-var _config = require("./config");
+var _config = _interopRequireDefault(require("./config"));
 
 var _path = require("path");
 
@@ -31,6 +31,11 @@ _moduleAlias.default.addAliases({
 console.log('环境', process.env.NODE_ENV);
 //
 const app = new _koa.default();
+const {
+  port,
+  viewDir,
+  staticDir
+} = _config.default;
 
 _log4js.default.configure({
   appenders: {
@@ -55,10 +60,10 @@ const logger = _log4js.default.getLogger("bff-test"); // logger.trace("Entering 
 // logger.fatal("Cheese was breeding ground for listeria.");
 
 
-app.use((0, _koaStatic.default)(_config.staticDir)); // app.use(historyApiFallback({ index:'/',whiteList: ['/api'] }));
+app.use((0, _koaStatic.default)(staticDir)); // app.use(historyApiFallback({ index:'/',whiteList: ['/api'] }));
 
 app.context.render = _co.default.wrap((0, _koaSwig.default)({
-  root: _config.viewDir,
+  root: viewDir,
   autoscape: true,
   cache: process.env.NODE_ENV == "development" ? false : 'memory',
   ext: 'html',
@@ -69,7 +74,8 @@ app.context.render = _co.default.wrap((0, _koaSwig.default)({
 _errorHandler.default.error(app, logger); //路由注册中心
 
 
-from('./controllers')(app);
-app.listen(_config.port, () => {
+require('./controllers').default(app);
+
+app.listen(port, () => {
   console.log('服务启动成功');
 });

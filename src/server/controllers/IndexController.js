@@ -1,13 +1,13 @@
-class IndexController{
-	constructor(){
+class IndexController {
+  constructor() {
 
-	}
-	async actionIndex(ctx,next){
-		ctx.body = await ctx.render('index',{
-            data:"backend data"
-        })
-        // ctx.body = await ctx.render('index-vue')
-	}
+  }
+  async actionIndex(ctx, next) {
+    ctx.body = await ctx.render('index/pages/index', {
+      data: "backend data"
+    })
+    // ctx.body = await ctx.render('index/pages/index')
+  }
 };
 
 export default IndexController;

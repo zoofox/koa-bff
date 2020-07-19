@@ -5,7 +5,7 @@ moduleAlias.addAliases({
   '@models': __dirname + '/models',
 })
 import Koa  from 'koa';
-import { port, viewDir, staticDir }  from './config';
+import config  from './config';
 console.log('环境', process.env.NODE_ENV);
 import { join }  from 'path';
 import co  from 'co';//
@@ -15,6 +15,8 @@ import render  from 'koa-swig';
 import { historyApiFallback }  from 'koa2-connect-history-api-fallback';
 import log4js  from "log4js";
 import errorHandler  from './middleware/errorHandler';
+
+const { port, viewDir, staticDir } = config;
 
 log4js.configure({
   appenders: { cheese: { type: "file", filename: "./logs/bff.log" } },
@@ -44,7 +46,7 @@ app.context.render = co.wrap(render({
 }))
 errorHandler.error(app, logger);
 //路由注册中心
-from('./controllers')(app);
+require('./controllers').default(app);
 
 app.listen(port, () => {
   console.log('服务启动成功');

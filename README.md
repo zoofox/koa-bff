@@ -19,6 +19,7 @@
 [babel-loader @babel/core @babel/preset-env] webpack es6->es5    
 [gulp-rollup]tree-shaking  
 [@rollup/plugin-replace] https://www.npmjs.com/package/@rollup/plugin-replace rollup替换字符  
+[node-bash-title] https://www.npmjs.com/package/node-bash-title bash标题
 
 
 

@@ -6,7 +6,9 @@ console.log(rollup)
 const entry = './src/server/**/*.js';
 const cleanEntry = './src/server/config/index.js';
 const replace = require('@rollup/plugin-replace');
+const setTitle = require('node-bash-title');
 
+setTitle('🚀server构建')
 
 //开发环境
 function builddev() {

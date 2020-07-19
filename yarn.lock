@@ -4880,6 +4880,11 @@ no-case@^3.0.3:
     lower-case "^2.0.1"
     tslib "^1.10.0"
 
+node-bash-title@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npm.taobao.org/node-bash-title/download/node-bash-title-0.0.2.tgz#f6b1490fdefb5e070f01c6d0ce2647872c81de15"
+  integrity sha1-9rFJD977XgcPAcbQziZHhyyB3hU=
+
 node-libs-browser@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/node-libs-browser/download/node-libs-browser-2.2.1.tgz#b64f513d18338625f90346d27b0d235e631f6425"
