@@ -1,9 +1,13 @@
-import {extend}  from('lodash');
-import {join}  from('path');
+import {extend}  from 'lodash';
+import {join}  from 'path';
 
 let config = {
 	"viewDir": join(__dirname, "..", 'views'),
 	"staticDir": join(__dirname, "..", 'assets'),
+}
+//will not built in dist
+if(false){
+  console.log('tree shaking test');
 }
 
 if(process.env.NODE_ENV == 'development'){

@@ -1,6 +1,4 @@
-const router = require('koa-simple-router');
 import router from 'koa-simple-router';
-const BooksController = require('@controllers/BooksController');
 import BooksController from '@controllers/BooksController';
 import IndexController from '@controllers/IndexController';
 import ApiController from '@controllers/ApiController';

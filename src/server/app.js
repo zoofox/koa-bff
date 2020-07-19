@@ -12,7 +12,7 @@ import co  from 'co';//
 const app = new Koa();
 import serve  from 'koa-static';
 import render  from 'koa-swig';
-import { historyApiFallback } = from 'koa2-connect-history-api-fallback';
+import { historyApiFallback }  from 'koa2-connect-history-api-fallback';
 import log4js  from "log4js";
 import errorHandler  from './middleware/errorHandler';
 
