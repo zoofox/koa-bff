@@ -62,6 +62,7 @@ const logger = _log4js.default.getLogger("bff-test"); // logger.trace("Entering 
 
 app.use((0, _koaStatic.default)(staticDir)); // app.use(historyApiFallback({ index:'/',whiteList: ['/api'] }));
 
+console.log(port, viewDir, staticDir);
 app.context.render = _co.default.wrap((0, _koaSwig.default)({
   root: viewDir,
   autoscape: true,
@@ -77,5 +78,5 @@ _errorHandler.default.error(app, logger); //路由注册中心
 require('./controllers').default(app);
 
 app.listen(port, () => {
-  console.log('服务启动成功');
+  console.log('服务启动成功', port);
 });

@@ -118,3 +118,21 @@
   syscall: 'open',
   path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
 }
+[2020-07-21T00:15:36.306] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/index/pages/index.html'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/index/pages/index.html'
+}
+[2020-07-21T00:16:40.319] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/index/pages/index.html'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/index/pages/index.html'
+}
+[2020-07-21T00:16:41.925] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/index/pages/index.html'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/index/pages/index.html'
+}

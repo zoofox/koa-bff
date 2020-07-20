@@ -35,7 +35,7 @@ const logger = log4js.getLogger("bff-test");
 
 app.use(serve(staticDir))
 // app.use(historyApiFallback({ index:'/',whiteList: ['/api'] }));
-
+console.log(port,viewDir,staticDir)
 app.context.render = co.wrap(render({
   root: viewDir,
   autoscape: true,
@@ -49,5 +49,5 @@ errorHandler.error(app, logger);
 require('./controllers').default(app);
 
 app.listen(port, () => {
-  console.log('服务启动成功');
+  console.log('服务启动成功',port);
 })

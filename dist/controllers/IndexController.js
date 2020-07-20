@@ -1,10 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
 class IndexController {
   constructor() {}
 
@@ -17,5 +12,4 @@ class IndexController {
 }
 
 ;
-var _default = IndexController;
-exports.default = _default;
+module.exports = IndexController;

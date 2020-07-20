@@ -1,20 +1,36 @@
-'use strict';
+"use strict";
 
-var lodash = require('lodash');
-var path = require('path');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _lodash = require("lodash");
+
+var _path = require("path");
 
 let config = {
-	"viewDir": path.join(__dirname, "..", 'views'),
-	"staticDir": path.join(__dirname, "..", 'assets'),
-};
+  "viewDir": (0, _path.join)(__dirname, "..", 'views'),
+  "staticDir": (0, _path.join)(__dirname, "..", 'assets')
+}; //will not built in dist
 
-{
-	const prodConfig = {
-		port:9001
-	};
-	config = lodash.extend(config, prodConfig);
+if (false) {
+  console.log('tree shaking test');
 }
 
-var config$1 = config;
+if (process.env.NODE_ENV == 'development') {
+  const localConfig = {
+    port: 9000
+  };
+  config = (0, _lodash.extend)(config, localConfig);
+}
 
-module.exports = config$1;
+if (process.env.NODE_ENV == 'production') {
+  const prodConfig = {
+    port: 9001
+  };
+  config = (0, _lodash.extend)(config, prodConfig);
+}
+
+var _default = config;
+exports.default = _default;

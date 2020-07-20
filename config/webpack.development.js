@@ -8,7 +8,7 @@ module.exports = {
 	plugins: [
 		new CopyPlugin({
 			patterns: [{
-				from: join(__dirname, '..', 'src/web/components/'),
+				from: join(__dirname, '..', 'src/web/views/layouts/layout.html'),
 				to: '../views/layouts/layout.html'
 			}],
 		}),
