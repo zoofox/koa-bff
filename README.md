@@ -6,7 +6,7 @@
 - client开发环境 npm run client:dev  
 - client上线环境 npm run client:prod  
   
-[js-doc]:（https://www.npmjs.com/package/js-doc） 文档  
+[js-doc]（https://www.npmjs.com/package/js-doc） 文档  
 [module-alias]（https://www.npmjs.com/package/module-alias） 别名  
 [koa-simple-router]（https://www.npmjs.com/package/koa-simple-router） 路由  
 [koa-swig]（https://www.npmjs.com/package/koa-swig） 模板引擎  

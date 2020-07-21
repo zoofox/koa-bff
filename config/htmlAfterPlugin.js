@@ -24,14 +24,11 @@ class HtmlAfterPlugin {
 					let _html = htmlPluginData.html;
 					/**
 					 * {
-						  publicPath: '../../../assets/',
-						  js: [
-						    '../../../assets/scripts/runtime.bundle.js',
-						    '../../../assets/scripts/books-list.bundle.js'
-						  ],
-						  css: [],
-						  manifest: undefined,
-						  favicon: undefined
+						  publicPath: '/',
+              js: [ '/scripts/runtime.bundle.js', '/scripts/books-create.bundle.js' ],
+              css: [],
+              manifest: undefined,
+              favicon: undefined
 						}
 					 */
 					console.log("🍊🍊🍊🍊", htmlPluginData.assets);
@@ -45,8 +42,9 @@ class HtmlAfterPlugin {
 			HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(
 				pluginName,
 				(data, cb) => {
-					let _html = data.html;
-					_html = _html.replace('<!--injectjs-->', this.jsarr.join(''));
+          let _html = data.html;
+          _html = _html.replace('<!--injectjs-->', this.jsarr.join(''));
+          // console.log('🍌',this.jsarr.join(''))
 					_html = _html.replace(/@components/g, '../../../components');
 					_html = _html.replace(/@layouts/g, '../../layouts');
 					data.html = _html;

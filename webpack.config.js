@@ -19,11 +19,11 @@ console.log('🐶', files);
 let _entry = {};
 let _plugins = [];
 
-_plugins.push(
-  new CleanWebpackPlugin({
-    cleanAfterEveryBuildPatterns: ['dist']
-  })
-)
+// _plugins.push(
+//   new CleanWebpackPlugin({
+//     cleanAfterEveryBuildPatterns: ['dist']
+//   })
+// )
 for (let item of files) {
   if (/.+\/([a-zA-Z]+-[a-zA-Z]+)(\.entry\.js$)/g.test(item) == true) {
     const entryKey = RegExp.$1;
@@ -46,10 +46,6 @@ for (let item of files) {
 
 const webpackConfig = {
   entry: _entry,
-  output: {
-    path: join(__dirname, './dist/assets'),
-    filename: 'scripts/[name].bundle.js'
-  },
   module: {
     rules: [
       {
@@ -60,6 +56,11 @@ const webpackConfig = {
         },
       },
     ],
+  },
+  output: {
+    path: join(__dirname, './dist/assets'),
+    publicPath: '/',
+    filename: 'scripts/[name].bundle.js'
   },
   watch: _mode == 'development' ? true : false,
   optimization: {
