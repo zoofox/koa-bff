@@ -25,6 +25,10 @@ var _default = app => {
 
     _.get('/index.html', indexController.actionIndex);
 
+    _.get('/books/add.html', indexController.actionIndex);
+
+    _.get('/books/list.html', booksController.actionIndex);
+
     _.get('/api/list', booksController.actionIndex);
   }));
 };

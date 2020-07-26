@@ -1,138 +1,15 @@
-[2020-07-20T00:22:00.956] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
+[2020-07-27T00:53:44.738] [ERROR] bff-test - Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/layouts/@components/banner/banner.html'
+    at Object.openSync (fs.js:447:3)
+    at Object.readFileSync (fs.js:349:35)
+    at Object.ret.load (/Users/xielei/Documents/src/yideng/bff/node_modules/swig-templates/lib/loaders/filesystem.js:59:15)
+    at exports.Swig.compileFile (/Users/xielei/Documents/src/yideng/bff/node_modules/swig-templates/lib/swig.js:740:31)
+    at Object.eval [as tpl] (eval at precompile (/Users/xielei/Documents/src/yideng/bff/node_modules/swig-templates/lib/swig.js:537:13), <anonymous>:10:18)
+    at compiled (/Users/xielei/Documents/src/yideng/bff/node_modules/swig-templates/lib/swig.js:664:18)
+    at /Users/xielei/Documents/src/yideng/bff/node_modules/swig-templates/lib/swig.js:604:20
+    at /Users/xielei/Documents/src/yideng/bff/node_modules/swig-templates/lib/swig.js:735:9
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:61:3) {
   errno: -2,
-  code: 'ENOENT',
   syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:22:07.737] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
   code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:22:17.632] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:25:11.815] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:25:12.776] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:26:43.488] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:26:45.630] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:28:20.000] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:28:20.985] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:28:34.661] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:28:39.522] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:31:09.587] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:31:10.874] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:31:53.632] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:31:55.916] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:32:58.934] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:33:18.898] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:35:05.821] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:37:31.571] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-20T00:41:46.616] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/index.html'
-}
-[2020-07-21T00:15:36.306] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/index/pages/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/index/pages/index.html'
-}
-[2020-07-21T00:16:40.319] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/index/pages/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/index/pages/index.html'
-}
-[2020-07-21T00:16:41.925] [ERROR] bff-test - [Error: ENOENT: no such file or directory, open '/index/pages/index.html'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/index/pages/index.html'
+  path: '/Users/xielei/Documents/src/yideng/bff/dist/views/layouts/@components/banner/banner.html'
 }
