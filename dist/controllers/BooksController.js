@@ -34,6 +34,9 @@ class BooksController {
       $('.pjaxcontent').each(function () {
         ctx.res.write($(this).html());
       });
+      $('.lazyload-js').each(function () {
+        ctx.res.write(`<script src="${$(this).attr('src')}"></script>`);
+      });
       ctx.res.end();
     } else {
       console.log('直接刷新'); //bigpipe

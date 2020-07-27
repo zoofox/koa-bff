@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const assetsHelp = (data) => {
 	let js = [];
 	const getAssetName = {
-		js: (item) => `<script src="${item}"></script>`,
+		js: (item) => `<script class="lazyload-js" src="${item}"></script>`,
 	};
 	for (let jsitem of data.js) {
 		js.push(getAssetName.js(jsitem))

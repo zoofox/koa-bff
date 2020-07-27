@@ -6,8 +6,8 @@
     {% block head %}{% endblock  %}
 </head>
 <body>
+  {%include '../../components/banner/banner.html'%}
 	<div id="app">
-    {%include '../../components/banner/banner.html'%}
       {% block content %}
       {% endblock  %}
   </div>

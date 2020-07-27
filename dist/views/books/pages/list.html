@@ -1,1 +1,14 @@
-{% extends '../../layouts/layout.html' %} {% block title %}🌲首页{% endblock %} {% block head %} {% endblock %} {% block content %}<h1>清单页面</h1><hr>{%include '../../../components/list/list.html'%} {% endblock %} {% block scripts%} {% endblock %}
+{% extends '../../layouts/layout.html' %}
+{% block title %}🌲首页{% endblock %}
+{% block head %}
+	<!--injectcss-->
+{% endblock %}
+{% block content %}
+     	<h1>清单页面</h1>
+     	<hr>
+     {%include '../../../components/list/list.html'%}
+{% endblock %}
+
+{% block scripts%}
+	<script class="lazyload-js" src="/scripts/runtime.bundle.js"></script><script class="lazyload-js" src="/scripts/books-list.bundle.js"></script>
+{% endblock %}
