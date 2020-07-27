@@ -1,16 +1,18 @@
-import Books from '@models/Books';
+import { route, GET } from 'awilix-koa';
 
-class ApiController {
-	constructor() {
+@route('/api')
+class BooksController {
+  constructor({ booksService }) {
+    this.booksService = booksService;
+  }
 
-	}
-	async actionIndex(ctx, next) {
-		const books = new Books;
-		const result = await books.getData();
-		ctx.body = {
-			result
-		};
-	}
-};
-
-export default ApiController;
+  @route('/list')
+  @GET()
+  async actionIndex(ctx) {
+    const result = await this.booksService.getData();
+    ctx.body = {
+      result,
+    };
+  }
+}
+export default BooksController;

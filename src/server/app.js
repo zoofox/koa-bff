@@ -9,12 +9,29 @@ import config  from './config';
 console.log('环境', process.env.NODE_ENV);
 import { join }  from 'path';
 import co  from 'co';//
-const app = new Koa();
+
 import serve  from 'koa-static';
 import render  from 'koa-swig';
 import { historyApiFallback }  from 'koa2-connect-history-api-fallback';
 import log4js  from "log4js";
 import errorHandler  from './middleware/errorHandler';
+
+const app = new Koa();
+
+//IOC
+import { createContainer, Lifetime } from 'awilix';
+import { loadControllers, scopePerRequest } from 'awilix-koa';
+// 创建核心的容器概念
+const container = createContainer();
+// 向容器的内部注入我们需要的类
+container.loadModules([`${__dirname}/services/*.js`], {
+  formatName: 'camelCase',
+  resolverOptions: {
+    lifetime: Lifetime.SCOPED,
+  },
+});
+// 终极注入
+app.use(scopePerRequest(container));
 
 const { port, viewDir, staticDir } = config;
 
@@ -45,8 +62,12 @@ app.context.render = co.wrap(render({
   writeBody: false
 }))
 errorHandler.error(app, logger);
+
 //路由注册中心
-require('./controllers').default(app);
+// require('./controllers').default(app);
+
+// 路由注册中心
+app.use(loadControllers(`${__dirname}/controllers/*.js`));
 
 app.listen(port, () => {
   console.log('服务启动成功',port);

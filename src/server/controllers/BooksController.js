@@ -1,10 +1,15 @@
 import Books from '@models/Books';
 import { Readable } from 'stream';
 import cheerio from 'cheerio';
+import { route, GET } from 'awilix-koa';
+
+@route('/books')
 class BooksController {
 	constructor() {
 
-	}
+  }
+  @route('/list')
+  @GET()
 	async actionIndex(ctx, next) {
 		// const books = new Books;
 		// const result = await books.getData();

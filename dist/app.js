@@ -20,6 +20,10 @@ var _log4js = _interopRequireDefault(require("log4js"));
 
 var _errorHandler = _interopRequireDefault(require("./middleware/errorHandler"));
 
+var _awilix = require("awilix");
+
+var _awilixKoa = require("awilix-koa");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _moduleAlias.default.addAliases({
@@ -29,8 +33,19 @@ _moduleAlias.default.addAliases({
 });
 
 console.log('环境', process.env.NODE_ENV);
-//
-const app = new _koa.default();
+const app = new _koa.default(); //IOC
+
+// 创建核心的容器概念
+const container = (0, _awilix.createContainer)(); // 向容器的内部注入我们需要的类
+
+container.loadModules([`${__dirname}/services/*.js`], {
+  formatName: 'camelCase',
+  resolverOptions: {
+    lifetime: _awilix.Lifetime.SCOPED
+  }
+}); // 终极注入
+
+app.use((0, _awilixKoa.scopePerRequest)(container));
 const {
   port,
   viewDir,
@@ -73,10 +88,11 @@ app.context.render = _co.default.wrap((0, _koaSwig.default)({
 }));
 
 _errorHandler.default.error(app, logger); //路由注册中心
+// require('./controllers').default(app);
+// 路由注册中心
 
 
-require('./controllers').default(app);
-
+app.use((0, _awilixKoa.loadControllers)(`${__dirname}/controllers/*.js`));
 app.listen(port, () => {
   console.log('服务启动成功', port);
 });

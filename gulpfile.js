@@ -18,7 +18,8 @@ function builddev() {
       babel({
         babelrc: false,
         "plugins": [
-          ["@babel/plugin-transform-modules-commonjs"]
+          ['@babel/plugin-proposal-decorators', { legacy: true }],
+          "@babel/plugin-transform-modules-commonjs"
         ]
       })
     )
@@ -32,7 +33,8 @@ function buildprod() {
         babelrc: false,
         ignore: [cleanEntry],
         "plugins": [
-          ["@babel/plugin-transform-modules-commonjs"]
+          ['@babel/plugin-proposal-decorators', { legacy: true }],
+          "@babel/plugin-transform-modules-commonjs"
         ]
       })
     )

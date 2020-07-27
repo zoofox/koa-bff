@@ -30,7 +30,11 @@
 [node-bash-title]（https://www.npmjs.com/package/node-bash-title） bash标题
 [pjax] 前端点击a加上请求头X-PJAX，以便node判断站内切换还是直接刷新  
 [cheerio] （https://www.npmjs.com/package/cheerio）server用jQuery方法解析html，多用于爬虫，此处用于解析html文件后同构渲染   
-[quicklink] 预加载资源
+[quicklink] 预加载资源  
+[awilix awilix-koa]IOC依赖注入，不用再单独维护index.js路由文件  
+[@babel/plugin-proposal-decorators]处理IOC装饰器问题  
+
+
 
 
 
